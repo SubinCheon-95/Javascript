@@ -7,7 +7,7 @@
     <!--
         날짜 : 2025/08/28
         이름 : 천수빈
-        내용 : 4장 자바스크립트 객체
+        내용 : 4장 자바스크립트 객체    
     -->
 </head>
 <body>
@@ -35,11 +35,11 @@
             </ol>
         </li>
         <li class="gj">광주</li>
-        </li>
     </ul>
-    
+
     <script>
-        // 문서객체 선택(생성)
+
+        //문서객체 선택(생성)
         const h3Tag = document.querySelector('h3');
         h3Tag.style.color = 'red';
 
@@ -71,7 +71,7 @@
         gwangju.style.color = 'green';
 
     </script>
-
+    
     <h4>문서객체 수정</h4>
     <style>
         .box {
@@ -86,7 +86,7 @@
         .blue {background-color: blue;}
     </style>
 
-    <img src="./images/flower1_360.jpg" alt="이미지1"/>
+    <img src="./images/flower1.jpg" alt="이미지1"/>
 
     <div class="box1">box1</div>
     <div class="box2">box2</div>
@@ -107,15 +107,16 @@
     <div class="box">box3</div>
 
     <script>
-        // 문서객체 수정
+
+        //문서객체 수정
 
         // 이미지 수정
         const img = document.getElementsByTagName('img')[0];
-        img.src = './images/flower2_360.jpg';
+        img.src = './images/flower2.jpg';
         img.alt = '코스모스';
         img.style.display = 'block';
 
-        //스타일 수정
+        // 스타일 수정
         const box1 = document.getElementsByClassName('box1')[0];
         box1.style.display = 'inline-block';
         box1.style.width = '100px';
@@ -148,9 +149,9 @@
         boxs[2].classList.toggle('blue');
 
     </script>
-
-    <h4>문서객체 추가/이동</h4>
     
+    <h4>문서객체 추가/이동</h4>
+
     <ul class="city">
         <li>
             <em>경기도</em>
@@ -182,7 +183,8 @@
     </ul>
 
     <script>
-        // 문서객체 추가/이동
+
+        //문서객체 추가/이동
         const gg = document.querySelector('.city > li:nth-child(1) > ol');
         const cc = document.querySelector('.city > li:nth-child(2) > ol');
         const gw = document.querySelector('.city > li:nth-child(3) > ol');
@@ -190,14 +192,14 @@
         const jl = document.querySelector('.city > li:nth-child(5) > ol');
 
         // 추가
-        gg.insertAdjacentHTML('beforeend', '<li>평택</li>');
+        gg.insertAdjacentHTML('beforeend', '<li>평택</li>'); // beforeend : 요소 안쪽 끝쪽
         gg.insertAdjacentHTML('beforeend', '<li>용인</li>');
-        gg.insertAdjacentHTML('afterbegin', '<li>성남</li>');
+        gg.insertAdjacentHTML('afterbegin', '<li>성남</li>'); // afterbegin : 요소 안쪽 앞쪽
         gg.insertAdjacentHTML('afterbegin', '<li>과천</li>');
 
         // 이동
         const nodes = gs.getElementsByTagName('li');
-
+        
         const sw = nodes[1];
         const mp = nodes[2];
         const by = nodes[3];
@@ -209,9 +211,9 @@
         cc.append(by);
         gw.append(wj);
         gg.prepend(pj);
-
+        
     </script>
-
+    
     <h4>문서객체 생성/삭제</h4>
 
     <section>
@@ -219,17 +221,17 @@
     </section>
 
     <script>
-        // 문서객체 생성/삭제
+        //문서객체 생성/삭제
         const section = document.getElementsByTagName('section')[0];
 
         const newImg = document.createElement('img');
-        newImg.src = './images/flower1_360.jpg';
-        newImg.alt = '벚꽃';
+        newImg.src = './images/flower1.jpg';
+        newImg.alt = '벗꽃';
 
         section.append(newImg);
 
         const h5 = document.getElementsByTagName('h5')[0];
-        
+        h5.remove();
     </script>
 </body>
 </html>

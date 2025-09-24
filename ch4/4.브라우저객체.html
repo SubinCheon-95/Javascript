@@ -7,13 +7,14 @@
     <!--
         날짜 : 2025/08/28
         이름 : 천수빈
-        내용 : 4장 자바스크립트 객체
+        내용 : 4장 자바스크립트 객체    
     -->
 </head>
 <body>
     <h3>4.브라우저객체</h3>
 
     <h4>window 객체</h4>
+
     <script>
         // window - 브라우저 객체, 최상위 객체, 일반적으로 생략
         console.log(window);
@@ -31,6 +32,7 @@
     </script>
 
     <h4>screen 객체</h4>
+
     <script>
 
         document.write('화면 너비 : ' + screen.width + '<br>');
@@ -41,6 +43,7 @@
     </script>
     
     <h4>navigator 객체</h4>
+
     <script>
 
         document.write('브라우저 코드명 : ' + navigator.appCodeName + '<br>');
@@ -50,8 +53,9 @@
         document.write('브라우저 정보 : ' + navigator.userAgent + '<br>');
 
     </script>
-
+    
     <h4>location 객체</h4>
+    
     <button onclick="f1()">새로고침</button>
     <button onclick="f2()">네이버 이동</button>
     <button onclick="f3()">구글 이동</button>
@@ -64,7 +68,7 @@
         }
 
         function f2(){
-            // 페이지 이동(주소 히스토리 저장, 가장 대중적)
+            // 페이지 이동(주소 히스토리 저장)
             location.href = 'https://naver.com';
         }
 
@@ -74,9 +78,9 @@
         }
 
     </script>
-
-
+    
     <h4>history 객체</h4>
+
     <button onclick="back()">뒤로</button>
     <button onclick="forward()">앞으로</button>
 
@@ -86,13 +90,12 @@
 
         const back = function(){
             history.back();
-        }
-        
+        }   
+
         const forward = function(){
             history.forward();
         }
-        
-    </script>
 
+    </script>
 </body>
 </html>
